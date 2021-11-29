@@ -1,18 +1,43 @@
 <section class="container-fluid admin-panel-bg ">
-    <div class="row">
+    <div class="row d-flex align-items-center justify-content-center h-100">
         <!-- Login card -->
-        <section class="col-6 ">
-<div class="row justify-content-center">
-    <div class="col-8 card border border-light">
-<div class="row justify-content-start">
-    <img src="../../assets/logo.png" alt="/" class="w-50 h-50">
-
-</div>    </div>
-
-</div>
-        </section>
-        <!-- image section -->
-        <section class="col-6"></section>
+        <div class="col-4 card border border-light px-5 py-3">
+            <form [formGroup]="Loginform">
+                <div class="row justify-content-center ">
+                    <img src="../../assets/logo.png" alt="/" class="w-50 h-50">
+                </div>
+                <div class="fs-3 my-2">
+                    Admin <span class="text-primary">Login</span>
+                </div>
+                <div class="small text-muted mb-4">
+                    Please Login to continue
+                </div>
+                <div class="row justify-content-center ">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email </mat-label>
+                        <input matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="row justify-content-center">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <div class="row ">
+                    <a class="small d-flex justify-content-end mb-3" href="/">Forget Password?</a>
+                </div>
+                <div class="row justify-content-center ">
+                    <button type="submit" class="text btn login-btn" [disabled]="!Loginform.valid">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
 
     </div>
 </section>

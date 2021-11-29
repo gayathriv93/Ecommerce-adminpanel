@@ -2,3 +2,7 @@
     background-color: var(--app-admin-panel-bg);
     height: 100vh;
 }
+.login-btn{
+    background-color: var(--app-admin-panel-bg);
+    color: white;
+}

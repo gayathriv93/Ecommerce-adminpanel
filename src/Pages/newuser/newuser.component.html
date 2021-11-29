@@ -1,0 +1,123 @@
+<div class="container-fluid pt-5 bg-secondary">
+    <div class="row justify-content-center">
+        <section class="col-9 border border-secondary p-5 bg-white">
+            <h1 class="fw-bold">New User Registration</h1>
+            <span class="small">Complete the form below to adding you for our membership service.</span>
+            <hr>
+            <form [formGroup]="Newuser" (ngSubmit)="onSubmit()">
+                <!-- name -->
+                <div class="row">
+                    <label class="fw-bold h6">Full Name: </label>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>FirstName</mat-label>
+                            <input matInput placeholder="FirstName" formControlName="firstName">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>LastName </mat-label>
+                            <input matInput placeholder="LastName" formControlName="lastName">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- contact details -->
+                <div class="row">
+                    <label class="fw-bold h6">ContactNo: </label>
+                    <div class="col-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="contactNo">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="fw-bold h6">MailID </label>
+                    <div class="col-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="emailId">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- login details -->
+                <div class="row">
+                    <label class="fw-bold h6">Username: </label>
+                    <div class="col-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="userName">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="fw-bold h6">Password </label>
+                    <div class="col-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput type="password"formControlName="password">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="fw-bold h6">Repeat Password </label>
+                    <div class="col-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput type="password">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- address -->
+                <label class="fw-bold h6">Address: </label>
+
+               <section class="" formGroupName="address">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="streetAddress1">
+                            <mat-hint>Street Address</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="streetAddress2">
+                            <mat-hint>Street Address Line2</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="city">
+                            <mat-hint>City</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="state">
+                            <mat-hint>State</mat-hint>
+
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="postalCode">
+                            <mat-hint>Postal/zipcode</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </div>
+               
+               </section> 
+                <hr>
+
+                <div class="text-center">
+                    <button  class="btn btn-success m-3" type="submit">Submit</button>
+                    <button class="btn btn-danger m-3" type="reset">Reset</button>
+
+                </div>
+            </form>
+        </section>
+
+    </div>
+</div>
