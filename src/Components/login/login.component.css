@@ -1,0 +1,4 @@
+.admin-panel-bg{
+    background-color: var(--app-admin-panel-bg);
+    height: 100vh;
+}
