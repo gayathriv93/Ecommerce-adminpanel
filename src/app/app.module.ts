@@ -16,17 +16,22 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import { NgxBootstrapIconsModule,allIcons } from 'ngx-bootstrap-icons';
 import { NewuserComponent } from '../Pages/newuser/newuser.component';
-
+import { NewproductComponent } from '../Pages/newproduct/newproduct.component';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
+import {TextFieldModule} from '@angular/cdk/text-field'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NewuserComponent
+    NewuserComponent,
+    NewproductComponent
   ],
   imports: [
     BrowserModule,
+    MaterialFileInputModule,
+    TextFieldModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,

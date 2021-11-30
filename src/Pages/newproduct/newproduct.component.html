@@ -1,0 +1,161 @@
+<div class="container-fluid pt-5">
+    <div class="row justify-content-center">
+        <section class="col-9 border border-secondary p-5 bg-white">
+            <h1 class="fw-bold">Product Registration</h1>
+            <span class="small">Register your product on the form below.</span>
+            <hr>
+            <form [formGroup]="productForm" (submit)="handleProductSubmit()">
+                <!-- name -->
+               <section formGroupName="user">
+                <div class="row">
+                    <label class="fw-bold h6"> Name: </label>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>FirstName</mat-label>
+                            <input matInput placeholder="FirstName" formControlName="firstName">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>LastName </mat-label>
+                            <input matInput placeholder="LastName" formControlName="lastName">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- contact details -->
+                <div class="row">
+                    <label class="fw-bold h6">ContactNo: </label>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="contactNo">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="fw-bold h6">MailID </label>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput formControlName="emailId">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+               </section>
+                <h2 class="fw-bold">Product Information</h2>
+                <hr>
+                <!-- Product details -->
+                <div class="row">
+                    <label class="fw-bold h6"> Brand: </label>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>BrandName</mat-label>
+                            <input matInput placeholder="Brand Name" formControlName="brandName">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Brand Id </mat-label>
+                            <input matInput placeholder="BrandId" formControlName="brandId">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- catelogue -->
+                <div class="row">
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field>
+                            <ngx-mat-file-input formControlName="catelogue" placeholder="catelogue" multiple
+                                (change)="onFileChanged($event)">
+                            </ngx-mat-file-input>
+                            <mat-icon matSuffix>folder</mat-icon>
+                        </mat-form-field>
+
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field>
+                            <ngx-mat-file-input formControlName="logo" placeholder="Logo"
+                                (change)="onFileChanged($event)">
+                            </ngx-mat-file-input>
+                            <mat-icon matSuffix>folder</mat-icon>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- price -->
+                <div class="row">
+                    <label class="fw-bold h6"> Price: </label>
+                    <div class="col-12 col-md-4 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Price</mat-label>
+                            <input matInput formControlName="price">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Masked Price </mat-label>
+                            <input matInput formControlName="maskedPrice">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Offer Price </mat-label>
+                            <input matInput formControlName="offerPrice">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="fw-bold h6"> Tax: </label>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Tax amt</mat-label>
+                            <input matInput formControlName="taxAmt">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Tax% </mat-label>
+                            <input matInput formControlName="taxPercentage">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>availability</mat-label>
+                            <input matInput formControlName="availability">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>sizes </mat-label>
+                            <input matInput formControlName="size">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex justify-content-start">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>color</mat-label>
+                            <input matInput formControlName="color">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- description -->
+
+                <div class="row">
+                    <label class="fw-bold h6">Product description </label>
+                    <div class="col-12 d-flex justify-content-start">
+                        <mat-form-field class="example-full-width w-100" appearance="fill">
+                            <mat-label>Add description</mat-label>
+                            <textarea matInput formControlName="productDescription">About Product</textarea>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success m-3" type="submit" [disabled]="!productForm.valid">Submit</button>
+                    <button class="btn btn-danger m-3" type="reset">Reset</button>
+
+                </div>
+            </form>
+        </section>
+
+    </div>
+</div>

@@ -1,6 +1,6 @@
-<div class="container-fluid pt-5 bg-secondary">
+<div class="container-fluid pt-5">
     <div class="row justify-content-center">
-        <section class="col-9 border border-secondary p-5 bg-white">
+        <section class="col-9 border border-secondary p-5">
             <h1 class="fw-bold">New User Registration</h1>
             <span class="small">Complete the form below to adding you for our membership service.</span>
             <hr>
@@ -112,7 +112,7 @@
                 <hr>
 
                 <div class="text-center">
-                    <button  class="btn btn-success m-3" type="submit">Submit</button>
+                    <button  class="btn btn-success m-3" type="submit" [disabled]="Newuser.valid">Submit</button>
                     <button class="btn btn-danger m-3" type="reset">Reset</button>
 
                 </div>
